@@ -1,38 +1,45 @@
-# DevelopClass
+# 과외의 지향점
+  1. `Top-Down 방식`으로 프로그램을 `개발`하면서 문법을 배운다.
+  2. `외우는 것`을 지양하고 내가 모르는 부분을 `스스로 찾고 해결하는 것`을 지향한다.
+  3. `Googling`과 `Debugging`만 할 수 있으면 혼자 모든 프로그램을 만들 수 있다.
+\
+\
+　
+# 사전준비
+###### 1. Visual Code 설치
+    - https://code.visualstudio.com/download
+    - 운영체제에 맞는 프로그램으로 설치
 
+###### 2. JDK 설치 (11 버전 이상)
+    - https://www.oracle.com/java/technologies/downloads/#jdk17-windows
+    - 운영체제에 맞는 프로그램으로 설치
 
-1. Visual Code 설치
-https://code.visualstudio.com/download
+###### 3. VS Code에 Java Extension 설치
+    - 왼쪽 메뉴에 `Extensions` 메뉴 혹은 `Ctrl+Shift+X`
+    - `java` 검색 후 `Extension Pack for Java` 설치
 
-2. JDK 설치 (11 버전 이상)
-https://www.oracle.com/java/technologies/downloads/#jdk17-windows
-
-3. vs code에 java extension 설치
-Extension Pack for Java
-
-4. 프로젝트 생성
-폴더 생성하고 main.java 파일 생성
-
-import java.util.Scanner;
-
-public class main {
-    public static void main(String[] args){
-        System.out.println("문자를 입력하세요 : ");
-        Scanner scan = new Scanner(System.in);
-        String test = scan.nextLine();
-        System.out.println(test);
-    }
-}
-
-
-5. 추가로 확인해야할 설정
-설정 > JAVA > DEBUG > Settings: Cosole : integratedTerminal 확인
-ctrl + , > Terminal 검색해도됨
-
-
-
-설명해야될거
-1. 코드를 실행시켰을 때 돌아가는 방식
+###### 4. 프로젝트 생성
+    - 원하는 경로에 빈 폴더를 생성
+    - `File → Open Folder`로 빈 폴더 열기
+    - `New File` 하고 파일 이름을 `main.java` 으로 생성
+    - 아래 Code 붙여넣기
+        ```java
+        import java.util.Scanner;
+        public class main {
+            public static void main(String[] args){
+                System.out.println("문자를 입력하세요 : ");
+                Scanner scan = new Scanner(System.in);
+                String test = scan.nextLine();
+                System.out.println(test);
+            }
+        }
+        ```
+###### 5. VS Code에서 추가로 확인해야할 설정
+    - `Ctrl + ,` → `Terminal` 검색 → Java Debug → Cosole : integratedTerminal 확인
+\
+\
+　
+# Chapter 1. 코드를 실행시켰을 때 돌아가는 방식
 우린 VS Code에 영어로된 명령어를 입력하고 프로그램을 "RUN" 했다.
 실제 컴퓨터는 0,1로만 이루어져있기 때문에
 우리가 프로그램을 실행시키면 VS code는 영어로 된 명령어를 컴퓨터가 이해할 수 있는 문자로 변환시켜주고
@@ -40,7 +47,7 @@ ctrl + , > Terminal 검색해도됨
 컴파일러가 고급언어에서 기계어로 바꿔준다. (자연어) --> (기계어)
 
 
-2. 프로그램이 동작하는 방식에 대해서 설명해주기
+# Capter 2. 프로그램이 동작하는 방식에 대한 설명
 우리가 컴퓨터라는걸 구매하면 H/W가 온다.
 (HW)
 아무것도 하지 않은채 전원을 바로 키면 ? 아무것도 실행이 되지 않는다.
@@ -69,7 +76,7 @@ C언어는 빌드하면 .exe 파일을 만들어주고 .exe파일을 실행하�
 ADD, SUB, SAVE 등 어셈블리어로 변환하고 실행한다.
 
 
-3. 코드 실행
+# Chapter 3. 코드 실행
 코드는 위에서 아래로, 왼쪽에서 오른쪽으로 실행을 빠르게 해주는 것뿐이다.
 프로그램을 "시작" 한다는 것은 출발점이 있다는 것이고 출발점은 반드시 1개여야 한다.
 그 "시작점"은 Java에선 "public static void main(String[] args)" 이다.
@@ -106,7 +113,7 @@ System.out.println(test);
 	test를 출력
   
 
-4. 코딩은 절차지향
+# Chapter 4. 코딩은 절차지향
 코드는 한줄씩 실행한다고 했다. 
 편의점에가서 음료수를 사온다.를 코딩해보자.
 	편의점에 간다.
@@ -161,6 +168,7 @@ sysout(num3);
 그럼 이렇게 구구단을 출력해보자
 
 
+# Chapter 5. 반복문
 개발자들은 귀차니즘이 많다. 반복하는 작업을 싫어하고 같은 코드를 적는걸 싫어한다. 
 for 문 설명
 	쭉 출력한것을 보면 고정값이 있고 규칙적으로 변하는 값이 있다.
@@ -173,6 +181,8 @@ while 설명
 
 프로그램을 함수와 같다. input을 받아서 정해진 로직에 의해 처리한 후 원하는 output을 주는 것이다.
 그럼 input을 받아보자. 숫자를 받아서 그 숫자에 해당하는 구구단만 출력해보자.
+
+# Chapter 6. 조건문
 if else 문 설명
 switch문 설명
 
@@ -180,6 +190,7 @@ switch문 설명
 method를 사용하면 코드 수정양이 줄고 간결해진다.
 method 설명
 
+# Chapter 7. 변수
 변수의 종류는
 int, float, double, String
 Array, List, Map 설명 ==> 구글링 하는 방법을 알려주자.
@@ -188,7 +199,7 @@ Array, List, Map 설명 ==> 구글링 하는 방법을 알려주자.
 이러면 끝! 이제 혼자 개발할 수 있다.
 
 
-
+# Chapter 8. FileStream
 그럼 우린 파일을 입력 받아서 파일을 읽고 컨트롤하는 것을 만들어보자.
 google에 java file 검색으로 시작!
 
@@ -196,7 +207,7 @@ google에 java file 검색으로 시작!
 ** 우리는 시험을 보는게 아니기 때문에 찾으면서 하는 방법을 터득해야 나중에 혼자서도 잘할 수 있다.
 
 
-
+# Chapter 0. Coder와 Developer
 코더 혹은 개발자의 테크
 NAVER에 html 코드를 보여주면서 개발은 소설을 쓰는 것과 같다. 
 하나하나 다 타이핑해서 만들어줘야하고 프로그램은 이런것들을 그냥 빠르게 실행시켜주는 것뿐이다.
@@ -206,7 +217,7 @@ NAVER에 html 코드를 보여주면서 개발은 소설을 쓰는 것과 같다
 코더는 기능 '개발'만 하는 것이고 6개월 국비지원 등은 코더를 양성하는 곳이다.
 개발자는 '구성', '개발', '테스트', '배포', '인프라', '운영' 등 시스템을 만드는 것이다.
 이를 위해선 H/W부터 OS도 알아야하고 전체적으로 많이 알아야한다. 
-이런것들이 대학교 정규과정에서 듣게한다. DFS, 알고리즘, OS, Memory, CPU, Linux들을 다 알아야 한다.
+이런것들이 대학교 정규과정에서 듣게한다. DFS, 알고리즘, OS, Memory, CPU, Linux, 
 
 개발을 취미로 하고 싶다면 ? 코더만 되도 큰 문제는 없다.
 JAVA에 console로 과외를 했지만 언어는 크게 상관없다.
@@ -214,7 +225,7 @@ JAVA에 console로 과외를 했지만 언어는 크게 상관없다.
 그 다음으론 Web, Mobile, exe 파일 중에서 뭘만들고 싶은지 정하면 된다. exe는 C#을 배워야한다.
 분야를 정해서 만들고 싶은 기능을 찾고 레퍼런스를 찾으면서 '기능'을 만들면 된다.
 
-
+# Chapter 00. 과외의 방향과 기술
 개발자는 크게 FE/BE로 나눈다.
 	FE : HTML, JS, ... 눈에 보이는 것을 만들고 디자이너(퍼블리셔)와 별도이다. 기능을 만드는 직업.
 	BE : 앞에서 보이지 않는 것들을 만든다. 서버를 만든다고 보면 된다.
