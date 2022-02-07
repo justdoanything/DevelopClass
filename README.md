@@ -10,7 +10,7 @@
     - https://code.visualstudio.com/download
     - 운영체제에 맞는 프로그램으로 설치
 
-###### 2. JDK 설치 (11 버전 이상)
+###### 2. JDK 설치 (11 버전 이상) 
     - https://www.oracle.com/java/technologies/downloads/#jdk17-windows
     - 운영체제에 맞는 프로그램으로 설치
 
