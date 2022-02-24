@@ -1,4 +1,4 @@
-# Chapter 4. 코딩은 절차지향
+# Chapter 4. 코드 짜기
 코드는 한줄씩 실행한다고 했다. 
 편의점에가서 음료수를 사온다.를 코딩해보자.
 	편의점에 간다.
@@ -51,3 +51,31 @@ sysout(num3);
 
 
 그럼 이렇게 구구단을 출력해보자
+
+
+```java
+public class main {
+    public static void main(String[] args){
+        System.out.println("문자를 입력하세요 : ");
+        Scanner scan = new Scanner(System.in);
+        String test = scan.nextLine();
+        System.out.println(test);
+    }
+}
+```
+
+import java.util.Scanner;
+	java가 기본으로 제공하는 기능 중에서 Scanner를 사용하기 위해서 명시.
+	java 안에 util 안에 Scanner 라는 객체를 사용하겠다. 즉 사전을 미리 가져오는 것이다.
+	이런게 없이 import java.*; 으로 전체 기능을 가져올 수 있는데 그럼 불필요한 기능까지 가져오기 때문에 용량이 커지고 프로그램이 무거워진다.
+	
+System.out.println("문자를 입력하세요 : ");
+  영어(고급언어)로 콘솔에 "문자를 입력하세요 : "를 출력해라는 명령어이다.
+  기본 기능들로 별도의 표기 없이 사용할 수 있다.
+
+Scanner scan = new Scanner(System.in);
+	Scanner를 사용하겠다고 명시한거.
+String test = scan.nextLine();
+	scan이 받은 문자를 test에 저장
+System.out.println(test);
+	test를 출력
