@@ -8,10 +8,10 @@
 따라서 `프로그램 실행`한다는 것은 명확한 `단 1개의 시작점`이 존재한다는 것이다. (Code에 시작점이 여러개라면 시작할 시작점을 반드시 1개만 정해줘야 한다.)
 
 ```java
-/* hello.java */
+/* HelloWorld.java */
 package JAVA.Code;
 
-public class hello {
+public class HelloWorld {
     public static void main(String[] args) {
         System.out.println("Hello! World!");
     }
