@@ -1,4 +1,6 @@
-# Chapter 7. 변수
+# Chapter 7. 객체와 파일 입출력
+
+### 객체(Array, List, Map)
 변수의 종류는
 int, float, double, String
 Array, List, Map 설명 ==> 구글링 하는 방법을 알려주자.
@@ -7,7 +9,7 @@ Array, List, Map 설명 ==> 구글링 하는 방법을 알려주자.
 이러면 끝! 이제 혼자 개발할 수 있다.
 
 
-# Chapter 8. FileStream
+### FileStream
 그럼 우린 파일을 입력 받아서 파일을 읽고 컨트롤하는 것을 만들어보자.
 google에 java file 검색으로 시작!
 
