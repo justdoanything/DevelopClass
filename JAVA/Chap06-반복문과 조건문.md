@@ -14,7 +14,7 @@ while 설명
 프로그램을 함수와 같다. input을 받아서 정해진 로직에 의해 처리한 후 원하는 output을 주는 것이다.
 그럼 input을 받아보자. 숫자를 받아서 그 숫자에 해당하는 구구단만 출력해보자.
 
-# 조건문(if else, switch)
+### 조건문(if else, switch)
 if else 문 설명
 switch문 설명
 
