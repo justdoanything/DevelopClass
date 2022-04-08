@@ -43,3 +43,12 @@ Coder와 Developer를 간단히 비교하자면 `Coder`는 `기능`을 개발하
 - Back-End 개발자
   - 일반 사용자들은 볼 수 없는 시스템을 만드는 개발자라고 보시면 됩니다.
   - 인증 처리나 로그인을 했을 때 회원에 종속되는 데이터들을 불러와서 보내주는 등 주로 데이터 처리와 같은 Business Logic을 담고 있습니다.
+
+# 기술 스택
+![Java Badge](https://img.shields.io/badge/Java-E50914?style=for-the-badge&logo=Java&logoColor=white)
+![C# Badge](https://img.shields.io/badge/CSharp-231F20?style=for-the-badge&logo=CSharp&logoColor=white)
+![Mysql Badge](https://img.shields.io/badge/Mysql-4479A1?style=for-the-badge&logo=Mysql&logoColor=white)
+![SpringBoot Badge](https://img.shields.io/badge/SpringBoot-6DB33F?style=for-the-badge&logo=SpringBoot&logoColor=white)
+![Docker Badge](https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white)
+![Kubernetes Badge](https://img.shields.io/badge/Kubernetes-blue?style=for-the-badge&logo=kubernetes&logoColor=white)
+![React Badge](https://img.shields.io/badge/React-lightgray?style=for-the-badge&logo=React&logoColor=white)
