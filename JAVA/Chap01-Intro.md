@@ -3,9 +3,10 @@
     - https://code.visualstudio.com/download
     - 운영체제에 맞는 프로그램으로 설치
 
-###### 2. JDK 설치 (11 버전 이상) 
-    - https://www.oracle.com/java/technologies/downloads/#jdk17-windows
+###### 2. OpenJDK 설치 
+    - https://github.com/ojdkbuild/ojdkbuild
     - 운영체제에 맞는 프로그램으로 설치
+    - Windows : java-11-openjdk-11.0.14.9-1.windows.ojdkbuild.x86_64.msi
 
 ###### 3. VS Code에 Java Extension 설치
     - 왼쪽 메뉴에 `Extensions` 메뉴 혹은 `Ctrl+Shift+X`

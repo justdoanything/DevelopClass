@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch LoopStatement",
+            "request": "launch",
+            "mainClass": "JAVA.Code.LoopStatement",
+            "projectName": "DevelopClass_2c5a675"
+        },
+        {
+            "type": "java",
+            "name": "Launch PrintString",
+            "request": "launch",
+            "mainClass": "JAVA.Code.PrintString",
+            "projectName": "DevelopClass_2c5a675"
+        },
+        {
+            "type": "java",
             "name": "Launch Current File",
             "request": "launch",
             "mainClass": "${file}"
