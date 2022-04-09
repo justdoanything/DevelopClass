@@ -1,4 +1,4 @@
-# Chapter 7. 객체와 파일 입출력
+# Chapter 8. 객체와 파일 입출력
 
 ### 객체(Array, List, Map)
 변수의 종류는
