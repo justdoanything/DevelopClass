@@ -1,35 +1,42 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "type": "java",
-            "name": "Launch LoopStatement",
-            "request": "launch",
-            "mainClass": "JAVA.Code.LoopStatement",
-            "projectName": "DevelopClass_2c5a675"
-        },
-        {
-            "type": "java",
-            "name": "Launch PrintString",
-            "request": "launch",
-            "mainClass": "JAVA.Code.PrintString",
-            "projectName": "DevelopClass_2c5a675"
-        },
-        {
-            "type": "java",
-            "name": "Launch Current File",
-            "request": "launch",
-            "mainClass": "${file}"
-        },
-        {
-            "type": "java",
-            "name": "Launch hello",
-            "request": "launch",
-            "mainClass": "JAVA.Code.hello",
-            "projectName": "DevelopClass_2c5a675"
-        }
-    ]
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Launch hw01Complete",
+      "request": "launch",
+      "mainClass": "edu_java_2017.hw01Complete",
+      "projectName": "DevelopClass_2c5a675"
+    },
+    {
+      "type": "java",
+      "name": "Launch LoopStatement",
+      "request": "launch",
+      "mainClass": "JAVA.Code.LoopStatement",
+      "projectName": "DevelopClass_2c5a675"
+    },
+    {
+      "type": "java",
+      "name": "Launch PrintString",
+      "request": "launch",
+      "mainClass": "JAVA.Code.PrintString",
+      "projectName": "DevelopClass_2c5a675"
+    },
+    {
+      "type": "java",
+      "name": "Launch Current File",
+      "request": "launch",
+      "mainClass": "${file}"
+    },
+    {
+      "type": "java",
+      "name": "Launch hello",
+      "request": "launch",
+      "mainClass": "JAVA.Code.hello",
+      "projectName": "DevelopClass_2c5a675"
+    }
+  ]
 }

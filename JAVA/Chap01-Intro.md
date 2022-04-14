@@ -42,16 +42,14 @@
     - `ctrl + ,` → `default formatter` 검색 → Prettier로 설정
     - `ctrl + ,` → `format on save` 검색 → 체크
 
-###### 부록. Github
+###### 부록. Github (https://github.com/)
 
-- https://github.com/
 - 회원가입 및 Repository 생성
 - Git 명령어
-  - 코드를 Local에 내려 받을 때
-    - git clone {repository url}
-  - git fetch
-  - git pull
-  - 코드를 Git에 올릴 때
-    - git add . 또는 git add {file}
-    - git commit -m {comment}
-    - git push
+  - `git clone {repository url}` : Git에 있는 Code를 Local에 내려 받기
+  - `git fetch` : Git Repository를 최신화
+  - `git pull` : 현재 선택 된 Branch의 Git Repository의 Code를 Local로 내려 받기
+  - Local에 있는 Code를 Git Repository로 올리기
+    - `git add . 또는 git add {file}`
+    - `git commit -m {comment}`
+    - `git push`
