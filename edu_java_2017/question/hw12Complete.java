@@ -1,7 +1,7 @@
 /*
  * 포인트 관리
  */
-package edu_java_2017;
+package edu_java_2017.question;
 
 import java.util.Scanner;
 import java.util.Vector;

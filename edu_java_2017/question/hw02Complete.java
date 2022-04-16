@@ -9,7 +9,7 @@ FFF/666/도연/여자/26/경기
 GGG/777/요한/남자/27/서울
  
 */
-package edu_java_2017;
+package edu_java_2017.question;
 
 import java.util.Hashtable;
 import java.util.Iterator;

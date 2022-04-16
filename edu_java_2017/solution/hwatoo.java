@@ -1,4 +1,4 @@
-package edu_java_2017;
+package edu_java_2017.solution;
 
 import java.util.ArrayList;
 import java.util.List;

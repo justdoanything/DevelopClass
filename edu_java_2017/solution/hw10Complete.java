@@ -1,7 +1,7 @@
 /*
  * 단어 뜻 맞추기
  */
-package edu_java_2017;
+package edu_java_2017.solution;
 
 import java.util.HashMap;
 import java.util.Random;

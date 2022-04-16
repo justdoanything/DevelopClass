@@ -1,4 +1,4 @@
-package edu_java_2017;
+package edu_java_2017.solution;
 
 import java.io.File;
 import java.io.FileNotFoundException;

@@ -1,7 +1,7 @@
 /*
  * GIF FILE 읽어서 복사하면서 10% 진행될때마다 화면에 _ 표시
  */
-package edu_java_2017;
+package edu_java_2017.solution;
 
 import java.io.File;
 import java.io.FileInputStream;

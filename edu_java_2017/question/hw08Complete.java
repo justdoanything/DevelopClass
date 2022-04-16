@@ -1,7 +1,7 @@
 /*
  * StringBuffer로 문자 랜덤 변환
  */
-package edu_java_2017;
+package edu_java_2017.question;
 
 import java.util.Random;
 import java.util.Scanner;

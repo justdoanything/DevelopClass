@@ -1,7 +1,7 @@
 /*
  * 알파벳 히스토그램
  */
-package edu_java_2017;
+package edu_java_2017.solution;
 
 import java.util.Scanner;
 

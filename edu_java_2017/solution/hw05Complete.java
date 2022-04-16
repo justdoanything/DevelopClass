@@ -1,7 +1,7 @@
 /*
  * 곰과 물고기 
  */
-package edu_java_2017;
+package edu_java_2017.solution;
 
 import java.util.InputMismatchException;
 import java.util.Random;

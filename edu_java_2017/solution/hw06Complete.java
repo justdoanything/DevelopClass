@@ -1,7 +1,7 @@
 /*
  * 도형 삽입/종류별 삭제
  */
-package edu_java_2017;
+package edu_java_2017.solution;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;

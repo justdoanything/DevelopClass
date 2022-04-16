@@ -1,7 +1,7 @@
 /*
  * 같은 수가 3번 연속 나오면 이기는 게임
  */
-package edu_java_2017;
+package edu_java_2017.solution;
 
 import java.util.Random;
 import java.util.Scanner;

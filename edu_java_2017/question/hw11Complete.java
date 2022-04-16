@@ -1,7 +1,7 @@
 /*
  * 지명과 위치정보 관리
  */
-package edu_java_2017;
+package edu_java_2017.question;
 
 import java.util.HashMap;
 import java.util.Scanner;

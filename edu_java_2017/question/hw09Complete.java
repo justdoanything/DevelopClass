@@ -1,7 +1,7 @@
 /*
  * 은행계좌 프로그램
  */
-package edu_java_2017;
+package edu_java_2017.question;
 
 import java.util.Hashtable;
 import java.util.InputMismatchException;
