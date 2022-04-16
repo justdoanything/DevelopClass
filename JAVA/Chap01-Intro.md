@@ -46,9 +46,13 @@
 
 - 회원가입 및 Repository 생성
 - Git 명령어
-  - `git clone {repository url}` : Git에 있는 Code를 Local에 내려 받기
-  - `git fetch` : Git Repository를 최신화
-  - `git pull` : 현재 선택 된 Branch의 Git Repository의 Code를 Local로 내려 받기
+  - Git 초기 설정
+    - `git config --global user.email={github email}`
+    - `git config --global user.name={github name}`
+  - Git Repository를 Local로 내려받기
+    - `git clone {repository url}` : Git에 있는 Code를 Local에 내려 받기
+    - `git fetch` : Git Repository를 최신화
+    - `git pull` : 현재 선택 된 Branch의 Git Repository의 Code를 Local로 내려 받기
   - Local에 있는 Code를 Git Repository로 올리기
     - `git add . 또는 git add {file}`
     - `git commit -m {comment}`
