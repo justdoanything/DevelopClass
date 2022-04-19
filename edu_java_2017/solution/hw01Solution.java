@@ -1,10 +1,13 @@
 /*
- * 단순한 매출 계산기
- * - 물품 등록 기능
- *   + 상품 이름, 가격 등록
- * - 물품 판매 기능
- *   + 등록된 상품 중에서 랜덤한 상품을 랜덤한 수만큼 판매하고 누적 판매 현황을 출력한다.
- * - 출력 예시
+
+물품을 등록하고 등록된 물품을 랜덤한 수만큼 판매하고 누적 판매 현황을 출력하는 프로그램
+
+- 물품 등록 기능
+  + 상품 이름, 가격 등록
+- 물품 판매 기능
+  + 등록된 상품 중에서 랜덤한 상품을 랜덤한 수만큼 판매하고 누적 판매 현황을 출력한다.
+
+########## Sample Run
 1번째 상품의 이름을 입력하세요 : [ 그만 등록하시려면 'e'를 누르세요. ] 
 사과
 사과의 가격을 입력하세요 :  1000
@@ -104,13 +107,13 @@ e
 
 [[ 프로그램을 종료합니다 ]]
  */
-package edu_java_2017.question;
+package edu_java_2017.solution;
 
 import java.util.InputMismatchException;
 import java.util.Random;
 import java.util.Scanner;
 
-public class hw01Complete 
+public class hw01Solution 
 {
 	static int totalMoney = 0;									//총 매출액
 	static String[] prodList = new String[1000];		//상품 이름 목록
