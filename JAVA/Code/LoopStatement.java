@@ -34,4 +34,8 @@ public class LoopStatement {
       doIndex++;
     } while (doIndex <= 9);
   }
+
+  public static void move() {
+
+  }
 }
