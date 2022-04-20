@@ -78,7 +78,7 @@ class Customer
 	}
 }
 
-public class hw04Complete 
+public class hw04Solution 
 {
 	//******************************************* 전역 변수 선언
 	static Scanner scan = new Scanner(System.in);

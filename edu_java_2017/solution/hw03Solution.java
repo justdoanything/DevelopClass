@@ -98,7 +98,7 @@ class Player
 }
 
 
-public class hw03Complete 
+public class hw03Solution 
 {	
 	public static void main(String[] args) 
 	{		
