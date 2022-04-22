@@ -8,28 +8,4 @@ public class PrintString {
         String inputString = scan.nextLine();
         System.out.println("입력한 문자 : " + inputString);
     }
-
-    public void move(){
-
-    }
-
-    public void move(int speed){
-
-    }
-
-    public void move(String mile){
-
-    }
-
-    public void move(int spped, String mile){
-
-    }
-    
-    public void move(String mile, int speed){
-
-    }
-
-    public void move(int fast) {
-
-    }
 }

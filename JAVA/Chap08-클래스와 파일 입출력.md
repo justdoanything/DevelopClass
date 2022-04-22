@@ -40,16 +40,10 @@ public class hw05
     ```
 
 - ### 자주쓰는 변수 타입의 객체
-### 객체(Array, List, Map)
-변수의 종류는
-int, float, double, String
-Array, List, Map 설명 ==> 구글링 하는 방법을 알려주자.
-. 을 사용해서 해당 객체가 갖는 기본 제공 함수들을 보여주자.
-
-이러면 끝! 이제 혼자 개발할 수 있다.
-
-
-
+  - 일반 변수 : int, float, double, ...
+  - 객체형 변수 : String, Array, Map, ... 
+    - Array : 데이터가 일렬로 저장되고 순서(index)에 의존해서 데이터에 접근
+    - Map : 데이터를 Key-Value 쌍으로 저장하고 Key에 의존해서 데이터에 접근
 
 - ### 부록
   - #### 오버라이딩 (Method Overloading0
@@ -86,29 +80,67 @@ Array, List, Map 설명 ==> 구글링 하는 방법을 알려주자.
       - 부모-자식 간의 관계를 사용할 때 사용한다. 부모 클래스에서 선언한 변수와 함수는 자식 클래스에서 따로 선언하지 않고 사용할 수 있다.
         ```java
         class Parent {
-          public int age;
-          public String name;
+          public int age = 20;
+          public String name = "Parent";
 
-          public void printName(){ }
+          public void printName(){ 
+            System.out.println(name);
+          }
         }
 
         class Child extends Parent { }
         
-        public class PrintString {
+        public class PrintChild {
           public static void main(String[] args) {
               Child child = new Child();
               
               // Child 클래스 안에 age, name을 선언하지 않았지만 사용할 수 있다.
-              child.age;
-              child.name
+              System.out.println(child.age);
+              System.out.println(child.name);
+              printName();
+
+              // ============출력결과
+              // 20
+              // Parent
+              // Parent
           }
         }
         ```
-      - 오버라이드 (Method Override)
+    - 오버라이드 (Method Override)
+      - 자식 클래스는 부모 클래스에 정의되있는 함수를 따로 선언하지 않고 사용할 수 있다. 하지만 그 함수의 동작을 재정의하고 싶을 땐, @Override를 사용한다.
+        ```java
+        class Parent {
+          public int age = 20;
+          public String name = "Parent";
 
-  - interface
+          public void printName(){ 
+            System.out.println(name);
+          }
+        }
+
+        class Child extends Parent { 
+          @Override
+          public void printName(){
+            name = "Child";
+            System.out.println("자식의 이름 : " + name);
+          }
+        }
+        
+        public class PrintChild {
+          public static void main(String[] args) {
+              Child child = new Child();
+              
+              // Child 클래스 안에 age, name을 선언하지 않았지만 사용할 수 있다.
+              System.out.println(child.age);
+              System.out.println(child.name);
+              child.printName();
+
+              // ============출력결과
+              // 20
+              // Parent
+              // 자식의 이름 : Child
+          }
+        }
+        ```
 
   - 함수 (C와 자바의 차이)
-
-
-** 우리는 시험을 보는게 아니기 때문에 찾으면서 하는 방법을 터득해야 나중에 혼자서도 잘할 수 있다.
