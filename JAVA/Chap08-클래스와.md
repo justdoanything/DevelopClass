@@ -1,4 +1,4 @@
-# Chapter 8. 클래스와 파일 입출력
+# Chapter 8. 클래스
 
 ### Class
 
@@ -42,8 +42,8 @@ public class hw05
 - ### 자주쓰는 변수 타입의 객체
   - 일반 변수 : int, float, double, ...
   - 객체형 변수 : String, Array, Map, ... 
-    - Array : 데이터가 일렬로 저장되고 순서(index)에 의존해서 데이터에 접근
-    - Map : 데이터를 Key-Value 쌍으로 저장하고 Key에 의존해서 데이터에 접근
+    - Array : 데이터가 일렬로 저장되고 `순서(index)`에 의존해서 데이터에 접근
+    - Map : 데이터를 Key-Value 쌍으로 저장하고 `Key`에 의존해서 데이터에 접근
 
 - ### 부록
   - #### 오버라이딩 (Method Overloading0
@@ -143,4 +143,34 @@ public class hw05
         }
         ```
 
-  - 함수 (C와 자바의 차이)
+  - ### 함수 선언 위치에 따른 C와 JAVA의 차이점
+    - JAVA는 코드가 실행될 때 코드 전체를 한 번 읽어서 클래스와 함수의 위치를 메모리에 올려놓고 실행되기 때문에 `main` 함수보다 아래에 함수를 생성하고 호출해도 정상작동한다.
+      ```java
+      public static void main(String[] args) {
+        // 정상작동
+        printBelowMethod();
+      }
+
+      private void printBelowMethod() { ... };
+      ```
+    - 하지만 C언어는 위에서 아래로 읽으면서 실행되기 때문에 반드시 위쪽에 함수를 선언하고 `main` 함수를 맨 아래에 두고 호출해야 한다.
+      ```c
+      #include <stdio.h>
+      
+      void printAboveMethod()
+      {
+        ...
+      }
+
+      int main()
+      {
+        printAboveMethod(); // 에러 발생
+        printBelowMethod(); // 정상 작동
+        return 0;
+      }
+
+      void printBelowMethod()
+      {
+        ...
+      }
+      ```
