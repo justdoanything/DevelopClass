@@ -62,12 +62,12 @@ System.out.println(test);
     }
     ```
   - C#과 같은 코드는 아래와 같이 `Code` 작성 후 `아래쪽`에 대괄호를 작성한다.
-  ```java
-  public class PrintString
-  {
-    public static void main(String[] args)
+    ```java
+    public class PrintString
     {
-      ...
+      public static void main(String[] args)
+      {
+        ...
+      }
     }
-  }
-  ```
+    ```

@@ -26,16 +26,12 @@ public class LoopStatement {
       index = 1;
       num++;
     }
-
+ 
     // do-while문 - 2단 출력
     int doIndex = 1;
     do {
       System.out.println("2 x " + doIndex + " = " + (2 * doIndex));
       doIndex++;
     } while (doIndex <= 9);
-  }
-
-  public static void move() {
-
   }
 }
