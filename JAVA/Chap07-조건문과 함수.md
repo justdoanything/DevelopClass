@@ -70,7 +70,7 @@
     ```
   - 🚨 주의사항
     - `switch`문에서 `case` 단위로 `break;`를 써줘야 한다. 경우에 따라서 빼주기도 하지만 `break;`가 있고 없고의 차이를 반드시 알아야 한다.
-    - `break;` 적지 않으면 코드가 `위에서 아래로 실행`되면서 모든 case를 실행한다.
+    - `break;` 적지 않으면 코드가 `위에서 아래로 실행`되면서 true인 case 이하의 모든 case를 실행한다.
       ```java
       /*
        * 아래의 코드는 결과는 다음과 같다.
@@ -126,13 +126,15 @@
 
 ### 함수(Method)
 
-반복문을 사용하고 조건문을 사용해도 `코드`를 여전히 길다. 중복되는 `코드`를 없애고 `재사용성`을 높이고 `가독성`을 높일 수 있다.
+- 반복문을 사용하고 조건문을 사용해도 `코드`를 여전히 길다. 중복되는 `코드`를 없애고 `재사용성`을 높이고 `가독성`을 높일 수 있다.
 
-- #### Method
-  - 중복된 코드를 함수로 분리하고 함수를 호출해서 사용할 수 있다.
-  - 함수는 반드시 클래스 안에 작성되어야 한다.
-  - 함수를 선언하는 형식\
-    `접근제어자` `(static)` `반환할 객체 타입` `함수 이름` ( `파라미터` ) { ... }
+- `public static void main(String[] args)`도 `main` 이라는 이름을 갖는 함수이다.
+- 중복된 코드를 함수로 분리하고 함수를 호출해서 사용할 수 있다.
+- 함수는 반드시 클래스 안에 작성되어야 한다.
+
+
+
+- #### Method 선언 방식 : `접근제어자` `(static)` `반환할 객체 타입` `함수 이름` ( `파라미터` ) { `code` }
     - ###### 접근제어자
       - public : 어떤 class에서도 호출할 수 있음
       - protected : 동일한 package 내에 있는 class이거나 파생된 class에서만 호출할 수 있음
@@ -141,11 +143,13 @@
     - ###### static
       - 생략할 수 있음
       - `static`을 사용하면 프로그램이 시작할 때 생성 됨. (Memory에 올라감)
+      - `main` 함수처럼 `static`이 붙은 곳에서 호출하면 `static`이 필수로 붙어야 한다.
     - ###### 반환할 객체 타입
       - int, String, Map 등 함수가 반환할 타입을 미리 정해야 한다.
       - 아무런 객체도 반환하지 않는다면 `void`를 사용하면 된다.
     - ###### 함수 이름
       - 변수 이름처럼 고유한 값을 가져야 한다.
+      - 일반적으로 클래스에 대한 `행동`을 정의할 때 사용하며 함수명은 `행동`에 대한 단어로 시작하는 것이 좋다. 예를들면 printName(), updateDate(), saveAge(), movePanael() 이다.
       - 일반적으로 class 내에서만 고유하면 되기 때문에 다른 class 내에선 같은 이름의 함수를 만들 수 있다.
         ```java
         class Car {
@@ -159,23 +163,23 @@
 
     - ###### 파라미터
       - 외부에서 값을 받아 함수 내에서 변수로 사용하고 싶을 땐 파라미터를 이용하면 된다.
-  - `public static void main(String[] args)`도 `main` 이라는 이름을 갖는 함수이다.
-  - 예제코드
-    ```java
-    public class LoopStatement {
-      // 입력받은 단을 출력하는 프로그램
-      public static void main(String[] args) {
-        // 5단 출력
-        printGugudan(5);
+  
+- 예제코드
+  ```java
+  public class LoopStatement {
+    // 입력받은 단을 출력하는 프로그램
+    public static void main(String[] args) {
+      // 5단 출력
+      printGugudan(5);
 
-        // 22단 출력
-        printGugudan(22);
-      }
+      // 22단 출력
+      printGugudan(22);
+    }
 
-      private static void printGugudan(int dan) {
-        for(int index = 1; index <= 9; index++) {
-          System.out.println(dan + " x " + index + " = " + (dan * index));
-        }
+    private static void printGugudan(int dan) {
+      for(int index = 1; index <= 9; index++) {
+        System.out.println(dan + " x " + index + " = " + (dan * index));
       }
     }
-    ```
+  }
+  ```

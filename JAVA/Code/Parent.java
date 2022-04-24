@@ -5,6 +5,6 @@ public class Parent {
     public String name = "Parent";
 
     public void printName(){ 
-        System.out.println(name);
+        System.out.println("부모입니다.");
     }
 }

@@ -6,7 +6,7 @@
 
 클래스는 함수와 마찬가지로 중복되는 `코드`를 없애고 `재사용성`을 높이고 `가독성`을 높일 수 있으며 `객체지향`으로 프로그램을 짜기 위해선 `함수(Method)`와 `클래스(Class)`를 잘 활용해야 한다. `객체`와 `클래스`는 같다고 생각해도 무방하다.
 
-edu_java_2017에 있는 코드를 보면 하나의 .java 파일 안에 여러 개의 class를 선언해서 사용하는 것을 볼 수 있다.
+edu_java_2017에 있는 코드를 보면 `하나의 .java` 파일 안에 `여러 개의 class`를 선언해서 사용하는 것을 볼 수 있다.
 ```java
 // hw05.java
 abstract class life { ... }
@@ -15,7 +15,9 @@ class fish extends life	{ ... }
 public class hw05 { ... }	
 ```
 
-실제 개발을 할 때엔 하나의 .java 파일 안에 여러 개의 class를 선언하지 않는다. 가독성이 떨어질 뿐더러 코드의 수정이나 유지보수가 어려워질 수 있기 때문이다. 위 코드를 예로 들면, `Bear.java`,`Fish.java`,`hw05.java`로 분리해서 `hw05.java`가 다른 클래스를 호출해서 사용해야 한다.
+실제 개발을 할 때엔 `하나의 .java` 파일 안에 `여러 개의 class`를 선언하지 않는다. 가독성이 떨어질 뿐더러 코드의 수정이나 유지보수가 어려워질 수 있기 때문이다. 위 코드를 예로 들면, `Bear.java`,`Fish.java`,`hw05.java`로 분리해서 `hw05.java`가 다른 클래스를 호출해서 사용해야 한다.
+
+`.java` 파일 단위를 클래스 또는 객체라고 부를 수 있다.
 ```java
 public class hw05 
 {
@@ -27,15 +29,32 @@ public class hw05
 
 - ### class 사용방법
   - 어떤 class에서 다른 class를 사용하기 위해선 class를 반드시 `생성(초기화)`를 해줘야 한다. 이 때 사용하는 키워드는 `new` 이다. 위 코드를 참고하자.
-  - class 안에 있는 변수와 함수는 `.`을 통해 꺼내서 사용할 수 있다.
+  - class 안에서 `속성`, `함수`를 정의해서 사용할 수 있다. bear라는 클래스가 이름과 나이, 지역이라는 속성을 갖고 있고 이동한다는 함수를 갖고 있다면 아래와 같이 표현할 수 있다.
     ```java
-    public class hw05 
-    {
+    public class bear {
+      public String name;
+      public int age;
+      public String region;
+
+      public void moveRight(int pixel) { ... }
+    }
+    ```
+  - class 안에 있는 변수와 함수는 `.`을 통해 값을 변경하거나 꺼내서 사용할 수 있다.
+    ```java
+    public class hw05 {
       Bear bear = new Bear();
       Fish fish = new Fish();
 
-      bear.name = "곰";
-      bear.move(3);
+      bear.name = "테디베어";
+      bear.age = 18;
+      bear.region = "시베리아"
+
+      System.out.println("곰의 이름은 " + bear.name + "입니다.");
+      System.out.println("곰의 나이는 " + bear.age + "입니다.");
+      System.out.println("곰의 서식지는 " + bear.region + "입니다.");
+      
+      // 곰을 이동합니다.
+      bear.moveRight(3);
     }
     ```
 
@@ -46,7 +65,7 @@ public class hw05
     - Map : 데이터를 Key-Value 쌍으로 저장하고 `Key`에 의존해서 데이터에 접근
 
 - ### 부록
-  - #### 오버라이딩 (Method Overloading0
+  - #### 함수 오버라이딩 (Method Overloading)
     - 함수는 파라미터의 수와 형식이 다르면 같은 이름을 사용할 수 있다.
       ```java
       public void move(){ }
@@ -78,13 +97,14 @@ public class hw05
       - 하나의 객체가 여러 가지 타입을 가질 수 있는 것을 의미한다. 자바에서는 이러한 다형성을 부모 클래스 타입의 참조 변수로 자식 클래스 타입의 인스턴스를 참조할 수 있도록 하여 구현하고 있다.
     - 상속 (extends)
       - 부모-자식 간의 관계를 사용할 때 사용한다. 부모 클래스에서 선언한 변수와 함수는 자식 클래스에서 따로 선언하지 않고 사용할 수 있다.
+      - 공통된 속성이 있을 때 부모 클래스를 만들고 하위 클래스가 상속받아 사용한다. 예를들어 bear, lion 클래스가 있다면 animal 클래스를 만들어서 공통 속성(이름, 나이, 서식지 등)을 정의하고 bear, lion이 상속받아 사용한다. bear, lion 클래스에 안에서 이름, 나이, 서식지 변수를 별도로 선언하지 않고 바로 사용할 수 있다.
         ```java
         class Parent {
           public int age = 20;
           public String name = "Parent";
 
           public void printName(){ 
-            System.out.println(name);
+            System.out.println("부모입니다.");
           }
         }
 
@@ -92,21 +112,20 @@ public class hw05
         
         public class PrintChild {
           public static void main(String[] args) {
+              Parent parent = new Parent();
               Child child = new Child();
               
               // Child 클래스 안에 age, name을 선언하지 않았지만 사용할 수 있다.
-              System.out.println(child.age);
-              System.out.println(child.name);
-              printName();
+              parent.printName();
+              child.printName();
 
               // ============출력결과
-              // 20
-              // Parent
-              // Parent
+              // "부모입니다."
+              // "부모입니다."
           }
         }
         ```
-    - 오버라이드 (Method Override)
+    - 함수 오버라이드 (Method Override)
       - 자식 클래스는 부모 클래스에 정의되있는 함수를 따로 선언하지 않고 사용할 수 있다. 하지만 그 함수의 동작을 재정의하고 싶을 땐, @Override를 사용한다.
         ```java
         class Parent {
@@ -114,31 +133,30 @@ public class hw05
           public String name = "Parent";
 
           public void printName(){ 
-            System.out.println(name);
+            System.out.println("부모입니다.");
           }
         }
 
+        // Method Override
         class Child extends Parent { 
           @Override
           public void printName(){
-            name = "Child";
-            System.out.println("자식의 이름 : " + name);
+            System.out.println("자식입니다.");
           }
         }
         
         public class PrintChild {
           public static void main(String[] args) {
+              Parent parent = new Parent();
               Child child = new Child();
               
               // Child 클래스 안에 age, name을 선언하지 않았지만 사용할 수 있다.
-              System.out.println(child.age);
-              System.out.println(child.name);
+              parent.printName();
               child.printName();
 
               // ============출력결과
-              // 20
-              // Parent
-              // 자식의 이름 : Child
+              // "부모입니다."
+              // "자식입니다."
           }
         }
         ```
@@ -147,7 +165,7 @@ public class hw05
     - JAVA는 코드가 실행될 때 코드 전체를 한 번 읽어서 클래스와 함수의 위치를 메모리에 올려놓고 실행되기 때문에 `main` 함수보다 아래에 함수를 생성하고 호출해도 정상작동한다.
       ```java
       public static void main(String[] args) {
-        // 정상작동
+        // 호출하는 함수가 아래에 위치하고 있지만 정상작동
         printBelowMethod();
       }
 
@@ -164,8 +182,9 @@ public class hw05
 
       int main()
       {
-        printAboveMethod(); // 에러 발생
-        printBelowMethod(); // 정상 작동
+        printAboveMethod(); // 정상 작동
+        printBelowMethod(); // 에러 발생
+        // 호출하는 함수보다 선언된 위치가 아래이면 에러가 발생한다.
         return 0;
       }
 
