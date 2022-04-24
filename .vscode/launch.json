@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch ReadWriteFiles",
+      "request": "launch",
+      "mainClass": "JAVA.Code.ReadWriteFiles",
+      "projectName": "DevelopClass_bfe5d43d"
+    },
+    {
+      "type": "java",
       "name": "Launch hw01Solution",
       "request": "launch",
       "mainClass": "edu_java_2017.solution.hw01Solution",
