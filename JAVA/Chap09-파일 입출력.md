@@ -5,11 +5,11 @@
 - `메모장 열기` -> `글 쓰기` -> `저장하기` -> `파일 닫기`
 
 파일을 열어서 기존에 있던 내용을 읽고 수정하는 과정을 써보자.
-- `메모장 열기` -> `한줄 읽기` -> `글 수정(쓰기)` -> `저장하기` -> `파일 닫기`
+- `메모장 열기` -> `한줄씩 읽기` -> `글 수정(쓰기)` -> `저장하기` -> `파일 닫기`
 
 우린 위와 같은 일련의 동작들을 프로그램 언어로 정의만 해주면 된다. 가장 먼저 `파일을 읽고` 안에 있는 `내용을 출력`하는 프로그램을 작성해보자.
 
-## FileReader
+## BufferedReader
 JAVA에서 파일을 읽을 수 있는 방법은 여러가지다 있다. 파일 읽기를 지원해주는 클래스는 `FileReader`,`BufferedReader`,`Scanner`,`Files` 등 여러가지가 존재한다. 
 
 이 예제에선 `BufferedReader`를 사용한다. 위에서 명시한 과정을 주석으로 나타내기 위해서 코드 형식을 나눴다.
@@ -24,7 +24,7 @@ public class ReadWriteFiles {
         
         
         try (
-            // 메모장 열기
+            // 1. 메모장 열기
             BufferedReader br = new BufferedReader(new FileReader(filePath))
             ) {
             
@@ -32,10 +32,10 @@ public class ReadWriteFiles {
 
             System.out.println("======파일 읽기 시작========");
             while(
-                // 한줄 읽기
+                // 2. 한줄씩 읽기
                 (line = br.readLine()) != null
                 ){
-                // 읽은 한줄 출력하기
+                // 3. 읽은 한줄 출력하기
                 System.out.println(line);
             }
             System.out.println("======파일 읽기 끝=======");
@@ -56,4 +56,216 @@ public class ReadWriteFiles {
 
 `try-catch`문은 함수 내에서 Exception 처리를 따로 명시할 수 있고 `throws`는 상위 객체로 Exception을 던지는 것이다.
  
+```java
+public class ExceptionHandler {
+    
+    /*
+     * try-catch문
+     * finally는 Exception이 발생하던 안하던 try-catch문이 끝나면 마지막으로 무조건 실행된다.
+     */
+    public static void main(String[] args){
+        String filePath = "/Users/yongwoo/Documents/justdoanything/DevelopClass/JAVA/text";
+        
+        BufferedReader br = null;
+        try {
+            br = new BufferedReader(new FileReader(filePath));
+            ...
+        }catch(Exception e) {
+            e.printStackTrace();
+            System.out.println("Exception 발생 : " + e.toString());
+        }finally{
+            // 파일 닫기
+            if(br != null) br.close();
+        }
+    }
+}
+```
+```java
+public class ExceptionHandler {
+    
+    /*
+     * throws문
+     * throws 문을 써주게 되면 함수 내에서 try-catch문을 써주지 않아도 된다.
+     */
+    public static void main(String[] args) throws Exception {
+        String filePath = "/Users/yongwoo/Documents/justdoanything/DevelopClass/JAVA/text";
+        
+        BufferedReader br = new BufferedReader(new FileReader(filePath));
+        ...
+        if(br != null) br.close();
+    }
+}
+```
 
+## BufferedWriter
+```java
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileReader;
+import java.io.FileWriter;
+
+public class ReadWriteFiles {
+    
+    public static void main(String[] args){
+        String filePath = "/Users/yongwoo/Documents/justdoanything/DevelopClass/JAVA/text";
+        
+        // 파일 읽기
+        readFile(filePath);
+
+        // 파일 쓰기
+        writeFile(filePath);
+        
+    }
+
+    private static void readFile(String filePath) {
+        try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
+            
+            String line = "";
+
+            System.out.println("======파일 읽기 시작========");
+            while(
+                // 2. 한줄씩 읽기
+                (line = br.readLine()) != null
+                ){
+                // 3. 읽은 한줄 출력하기
+                System.out.println(line);
+            }
+            System.out.println("======파일 읽기 끝=======");
+        }catch(Exception e) {
+            e.printStackTrace();
+            System.out.println("Exception 발생 : " + e.toString());
+        }
+    }
+
+    private static void writeFile(String filePath) {
+        // 덮어쓰기
+        // try (BufferedWriter bw = new BufferedWriter(new FileWriter(filePath, true))) {
+
+        // 이어쓰기
+        String line = "";
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(filePath, true))) {
+            System.out.println("======파일 쓰기 시작========");
+            line = "새로운 라인 첫번째입니다.";
+            bw.write(line);
+            bw.newLine();
+            System.out.println(line);
+            
+            line = "새로운 라인 두번째입니다.";
+            bw.write(line);
+            bw.newLine();
+            System.out.println(line);
+            
+            bw.flush();
+            System.out.println("======파일 쓰기 끝========");
+        }catch(Exception e){
+            e.printStackTrace();
+            System.out.println("Exception 발생 : " + e.toString());
+        }
+    }
+}
+```
+
+## 파일 수정하기
+```java
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.util.ArrayList;
+import java.util.List;
+
+public class ReadWriteFiles {
+    
+    public static void main(String[] args){
+        String filePath = "/Users/yongwoo/Documents/justdoanything/DevelopClass/JAVA/text";
+        
+        // 파일 읽기
+        readFile(filePath);
+
+        // 파일 쓰기
+        writeFile(filePath);
+        
+        // 파일 수정
+        updateFile(filePath);
+    }
+
+    private static void readFile(String filePath) {
+        try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
+            
+            String line = "";
+
+            System.out.println("======파일 읽기 시작========");
+            while(
+                // 2. 한줄씩 읽기
+                (line = br.readLine()) != null
+                ){
+                // 3. 읽은 한줄 출력하기
+                System.out.println(line);
+            }
+            System.out.println("======파일 읽기 끝=======");
+        }catch(Exception e) {
+            e.printStackTrace();
+            System.out.println("Exception 발생 : " + e.toString());
+        }
+    }
+
+    private static void writeFile(String filePath) {
+        // 덮어쓰기
+        // try (BufferedWriter bw = new BufferedWriter(new FileWriter(filePath, true))) {
+
+        // 이어쓰기
+        String line = "";
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(filePath, true))) {
+            System.out.println("======파일 쓰기 시작========");
+            line = "새로운 라인 첫번째입니다.";
+            bw.write(line);
+            bw.newLine();
+            System.out.println(line);
+            
+            line = "새로운 라인 두번째입니다.";
+            bw.write(line);
+            bw.newLine();
+            System.out.println(line);
+            
+            bw.flush();
+            System.out.println("======파일 쓰기 끝========");
+        }catch(Exception e){
+            e.printStackTrace();
+            System.out.println("Exception 발생 : " + e.toString());
+        }
+    }
+
+    private static void updateFile(String filePath) {
+        List<String> lineList = new ArrayList<>();
+        
+        try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
+            
+            String line = "";
+
+            System.out.println("======파일 수정 시작========");
+            while((line = br.readLine()) != null){
+                lineList.add(line);
+            }
+            try (BufferedWriter bw = new BufferedWriter(new FileWriter(filePath, false))){
+                if(lineList.get(1) != null)
+                lineList.remove(1);
+                lineList.add(1, "수정한 라인입니다.");
+
+                for(String writeLine : lineList){
+                    bw.write(writeLine);
+                    bw.newLine();
+                }
+            }catch(Exception ee) {
+                ee.printStackTrace();
+                System.out.println("Exception 발생 : " + ee.toString());    
+            }
+
+            System.out.println("======파일 수정 끝=======");
+            
+        }catch(Exception e) {
+            e.printStackTrace();
+            System.out.println("Exception 발생 : " + e.toString());
+        }
+    }
+}
+```

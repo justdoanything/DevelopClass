@@ -10,41 +10,6 @@
       "request": "launch",
       "mainClass": "JAVA.Code.ReadWriteFiles",
       "projectName": "DevelopClass_bfe5d43d"
-    },
-    {
-      "type": "java",
-      "name": "Launch hw01Solution",
-      "request": "launch",
-      "mainClass": "edu_java_2017.solution.hw01Solution",
-      "projectName": "DevelopClass_bfe5d43d"
-    },
-    {
-      "type": "java",
-      "name": "Launch ConditionStatement",
-      "request": "launch",
-      "mainClass": "JAVA.Code.ConditionStatement",
-      "projectName": "DevelopClass_bfe5d43d"
-    },
-    {
-      "type": "java",
-      "name": "Launch HelloWorld",
-      "request": "launch",
-      "mainClass": "JAVA.Code.HelloWorld",
-      "projectName": "DevelopClass_bfe5d43d"
-    },
-    {
-      "type": "java",
-      "name": "Launch hw04Solution",
-      "request": "launch",
-      "mainClass": "edu_java_2017.solution.hw04Solution",
-      "projectName": "DevelopClass_bfe5d43d"
-    },
-    {
-      "type": "java",
-      "name": "Launch LoopStatement",
-      "request": "launch",
-      "mainClass": "JAVA.Code.LoopStatement",
-      "projectName": "DevelopClass_bfe5d43d"
     }
   ]
 }
