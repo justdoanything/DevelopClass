@@ -76,7 +76,7 @@ class saveFigure implements printFigure
 }
 
 
-public class hw06 
+public class question10 
 {
 	static Scanner scan = new Scanner(System.in);
 	

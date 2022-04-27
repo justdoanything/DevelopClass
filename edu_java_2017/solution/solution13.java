@@ -1,14 +1,14 @@
 /*
  * GIF FILE 읽어서 복사하면서 10% 진행될때마다 화면에 _ 표시
  */
-package edu_java_2017.question;
+package edu_java_2017.solution;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 
-public class hw15Complete 
+public class solution13 
 {
 	public static void main(String[] args) throws FileNotFoundException 
 	{

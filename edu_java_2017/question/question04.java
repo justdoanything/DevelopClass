@@ -111,7 +111,7 @@ package edu_java_2017.question;
 
 import java.util.Scanner;
 
-public class hw01 
+public class question04 
 {
 	static Scanner scan = new Scanner(System.in);
 	

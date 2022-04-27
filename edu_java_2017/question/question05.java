@@ -35,7 +35,7 @@ class person
 
 }
 
-public class hw02 
+public class question05 
 {
 	static Scanner scan = new Scanner(System.in);
 	

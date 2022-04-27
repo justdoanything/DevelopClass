@@ -1,7 +1,7 @@
 /*
  * 지명과 위치정보 관리
  */
-package edu_java_2017.question;
+package edu_java_2017.solution;
 
 import java.util.HashMap;
 import java.util.Scanner;
@@ -30,7 +30,7 @@ class Location
 }
 
 
-public class hw11Complete 
+public class solution06 
 {
 	static Scanner scan = new Scanner(System.in);
 	static Location[] loc =new Location[100];

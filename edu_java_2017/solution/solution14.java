@@ -18,7 +18,7 @@ class Answer
 	
 }
 
-public class hw14Complete 
+public class solution14 
 {
 	static Answer A = new Answer();
 	

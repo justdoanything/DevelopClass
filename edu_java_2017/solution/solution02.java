@@ -1,11 +1,43 @@
 /*
  * 알파벳 히스토그램
+ * 
+ * 
+ * 
+ * ==================Sample RUn
+ * 영어 문장을 입력하세요
+영어 문장을 입력하세요
+apple
+a - 
+b
+c
+d
+e - 
+f
+g
+h
+i
+j
+k
+l - 
+m
+n
+o
+p -  - 
+q
+r
+s
+t
+u
+v
+w
+x
+y
  */
 package edu_java_2017.solution;
 
 import java.util.Scanner;
 
-public class hw07Complete 
+public class solution02 
 {
 	static Scanner scan = new Scanner(System.in);
 	

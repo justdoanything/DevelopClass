@@ -113,7 +113,7 @@ import java.util.InputMismatchException;
 import java.util.Random;
 import java.util.Scanner;
 
-public class hw01Solution 
+public class solution04 
 {
 	static int totalMoney = 0;									//총 매출액
 	static String[] prodList = new String[1000];		//상품 이름 목록

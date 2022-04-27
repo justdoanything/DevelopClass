@@ -1,11 +1,7 @@
 package edu_java_2017.question;
 
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
-import java.util.Scanner;
 
 public class prefix 
 {
@@ -37,26 +33,7 @@ public class prefix
 		* 예외처리 1 : 입력받은 파일의 오류가 생겼을 경우
 		* 
 		*************************************************************************/
-		Scanner scan = new Scanner(System.in);
-		String directory = "D:\\prefixFile\\prefixTest.txt";	//***** 파일 경로 입력
 		
-		try
-		{
-			scan = new Scanner(new File(directory));	
-			while(scan.hasNextLine()) 								//*  한줄 단위로 입력받는다.
-			{
-				String input[] = scan.nextLine().split(","); 		//*  쉼표(,)를 구분자로 나눠 저장한다.
-				cardCode2.add(Integer.parseInt(input[0]));		//*  앞의 2자리는 cardCode2 에 저장
-				cardCode6.add(Integer.parseInt(input[1]));		//*  뒤에 6자리는 cardCode6 에 저장, 입력받은 파일은 검증이 완료된 상태라고 가정하고 검증을 따로 하지 않는다.
-			}
-			scan.close();
-		} 
-		
-		catch (FileNotFoundException e) //* 예외처리 1
-		{
-			e.printStackTrace();
-			System.out.println("파일 입력받을 때 오류 발생 : " + e.getMessage()); //* 오류 위치 출력
-		}
 	}
 	
 	public String getCardCode(int sixNum)
@@ -76,36 +53,7 @@ public class prefix
 		* 
 		***************************************************************************/
 		
-		int index;
-		String stringResult;
-		
-		if(cardCode6.contains(sixNum))	//* 예외처리1 		
-		{
-			index = Collections.binarySearch(cardCode6, sixNum);	
-		
-			if(index < 0 || index >= cardCode2.size()) //** 예외처리2
-			{
-				System.out.println("파일이 정렬되어 있지 않거나 검증되지 않았습니다. 파일을 확인해 주세요.");
-				return "-200";
-			}
-			
-			
-			/***********************************************
-			 * int형은 앞자리의 0을 생략하므로 ( 01 -> 1) 0을 붙여주는 작업  
-			 *
-			 ***********************************************/
-			stringResult = String.valueOf(cardCode2.get(index));
-			if(stringResult.length()==1)
-				stringResult = "0"+stringResult;
-				
-			return stringResult;
-		}
-		
-		else //* 예외처리1
-		{
-			System.out.println("입력한 6자리 숫자에 대응하는 카드코드가 없습니다.");
-			return "-100";
-		}
+		return "";
 	}
 }
 

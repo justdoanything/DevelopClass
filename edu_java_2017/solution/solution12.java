@@ -1,7 +1,7 @@
 /*
  * 은행계좌 프로그램
  */
-package edu_java_2017.question;
+package edu_java_2017.solution;
 
 import java.util.Hashtable;
 import java.util.InputMismatchException;
@@ -35,7 +35,7 @@ class bankCustomer
 
 
 
-public class hw09Complete 
+public class solution12 
 {
 	static Scanner scan = new Scanner(System.in);
 	static bankCustomer[] Bcus = new bankCustomer[100];

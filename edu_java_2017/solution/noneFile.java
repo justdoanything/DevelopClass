@@ -212,7 +212,7 @@ class Price extends NameMap	//파일 1번만 입력받기 위해서 하나의 �
 
 }
 
-public class hw16Complete 
+public class noneFile 
 {
 	public static void main(String[] args) throws IOException 
 	{	

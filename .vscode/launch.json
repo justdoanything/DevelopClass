@@ -6,6 +6,41 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch solution11",
+      "request": "launch",
+      "mainClass": "edu_java_2017.solution.solution11",
+      "projectName": "DevelopClass_bfe5d43d"
+    },
+    {
+      "type": "java",
+      "name": "Launch hw16Complete",
+      "request": "launch",
+      "mainClass": "edu_java_2017.question.hw16Complete",
+      "projectName": "DevelopClass_bfe5d43d"
+    },
+    {
+      "type": "java",
+      "name": "Launch hw14Complete",
+      "request": "launch",
+      "mainClass": "edu_java_2017.question.hw14Complete",
+      "projectName": "DevelopClass_bfe5d43d"
+    },
+    {
+      "type": "java",
+      "name": "Launch hw08Complete",
+      "request": "launch",
+      "mainClass": "edu_java_2017.question.hw08Complete",
+      "projectName": "DevelopClass_bfe5d43d"
+    },
+    {
+      "type": "java",
+      "name": "Launch hw07Complete",
+      "request": "launch",
+      "mainClass": "edu_java_2017.solution.hw07Complete",
+      "projectName": "DevelopClass_bfe5d43d"
+    },
+    {
+      "type": "java",
       "name": "Launch ReadWriteFiles",
       "request": "launch",
       "mainClass": "JAVA.Code.ReadWriteFiles",

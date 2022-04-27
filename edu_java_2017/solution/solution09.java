@@ -125,9 +125,9 @@ class bear extends life	// 부모 life로부터 변수와 move메소드를 상�
 		case "UP" :
 			if(checkPosition((this.row-1), -2))	//checkPosition 이라는 boolean 함수를 사용해 이동하는 곳이 true면 이동하고 false면 이동하지 않는다.
 			{
-				hw05Solution.field[this.row][this.col] = "-";		//과거의 위치를 지우고
+				solution09.field[this.row][this.col] = "-";		//과거의 위치를 지우고
 				this.row -= 1;									//이동할 위치를 기록하고
-				hw05Solution.field[this.row][this.col] = "B";		//이동한 위치에 표시해준다.
+				solution09.field[this.row][this.col] = "B";		//이동한 위치에 표시해준다.
 				return true;		//이동할 값이 유효하므로 true 반환
 			}
 			else
@@ -139,9 +139,9 @@ class bear extends life	// 부모 life로부터 변수와 move메소드를 상�
 		case "DOWN" :
 			if(checkPosition((this.row+1),-2))
 			{
-				hw05Solution.field[this.row][this.col] = "-";
+				solution09.field[this.row][this.col] = "-";
 				this.row += 1;
-				hw05Solution.field[this.row][this.col] = "B";
+				solution09.field[this.row][this.col] = "B";
 				return true;
 			}
 			else
@@ -153,9 +153,9 @@ class bear extends life	// 부모 life로부터 변수와 move메소드를 상�
 		case "LEFT" :
 			if(checkPosition(-2,(this.col-1)))
 			{
-				hw05Solution.field[this.row][this.col] = "-";
+				solution09.field[this.row][this.col] = "-";
 				this.col -= 1;
-				hw05Solution.field[this.row][this.col] = "B";
+				solution09.field[this.row][this.col] = "B";
 				return true;
 			}
 			
@@ -168,9 +168,9 @@ class bear extends life	// 부모 life로부터 변수와 move메소드를 상�
 		case "RIGHT" :
 			if(checkPosition(-2, this.col+1))
 			{
-				hw05Solution.field[this.row][this.col] = "-";
+				solution09.field[this.row][this.col] = "-";
 				this.col += 1;
-				hw05Solution.field[this.row][this.col] = "B";
+				solution09.field[this.row][this.col] = "B";
 				return true;
 			}
 			else
@@ -209,9 +209,9 @@ class fish extends life		// 부모 life로부터 변수와 메소드를 상속 �
 		case "UP" :
 			if(checkPosition((this.row-1), -2))
 			{
-				hw05Solution.field[this.row][this.col] = "-";
+				solution09.field[this.row][this.col] = "-";
 				this.row -= 1;
-				hw05Solution.field[this.row][this.col] = "F";
+				solution09.field[this.row][this.col] = "F";
 				return true;
 			}
 			else
@@ -223,9 +223,9 @@ class fish extends life		// 부모 life로부터 변수와 메소드를 상속 �
 		case "DOWN" :
 			if(checkPosition((this.row+1),-2))
 			{
-				hw05Solution.field[this.row][this.col] = "-";
+				solution09.field[this.row][this.col] = "-";
 				this.row += 1;
-				hw05Solution.field[this.row][this.col] = "F";
+				solution09.field[this.row][this.col] = "F";
 				return true;
 			}
 			else
@@ -237,9 +237,9 @@ class fish extends life		// 부모 life로부터 변수와 메소드를 상속 �
 		case "LEFT" :
 			if(checkPosition(-2,(this.col-1)))
 			{
-				hw05Solution.field[this.row][this.col] = "-";
+				solution09.field[this.row][this.col] = "-";
 				this.col -= 1;
-				hw05Solution.field[this.row][this.col] = "F";
+				solution09.field[this.row][this.col] = "F";
 				return true;
 			}
 			
@@ -252,9 +252,9 @@ class fish extends life		// 부모 life로부터 변수와 메소드를 상속 �
 		case "RIGHT" :
 			if(checkPosition(-2, this.col+1))
 			{
-				hw05Solution.field[this.row][this.col] = "-";
+				solution09.field[this.row][this.col] = "-";
 				this.col += 1;
-				hw05Solution.field[this.row][this.col] = "F";
+				solution09.field[this.row][this.col] = "F";
 				return true;
 			}
 			else
@@ -271,7 +271,7 @@ class fish extends life		// 부모 life로부터 변수와 메소드를 상속 �
 }
 
 
-public class hw05Solution 
+public class solution09 
 {	
 	static Scanner scan = new Scanner(System.in);
 	static Random rand = new Random();

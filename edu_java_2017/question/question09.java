@@ -146,7 +146,7 @@ class fish extends life		// 부모 life로부터 변수와 메소드를 상속 �
 }
 
 
-public class hw05 
+public class question09 
 {	
 	static Scanner scan = new Scanner(System.in);
 	static Random rand = new Random();

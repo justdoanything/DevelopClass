@@ -1,7 +1,7 @@
 /*
  * 단어 뜻 맞추기
  */
-package edu_java_2017.question;
+package edu_java_2017.solution;
 
 import java.util.HashMap;
 import java.util.Random;
@@ -24,7 +24,7 @@ class Word
 }
 
 
-public class hw10Complete 
+public class solution11 
 {
 	static Vector<Word> word =new Vector<Word>();
 	static Random ran = new Random();

@@ -58,7 +58,7 @@ class Customer
 
 }
 
-public class hw04 
+public class question08 
 {
 	//******************************************* 전역 변수 선언
 	static Scanner scan = new Scanner(System.in);

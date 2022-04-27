@@ -53,7 +53,7 @@ class person
 	}
 }
 
-public class hw02Solution 
+public class solution05 
 {
 	static Scanner scan = new Scanner(System.in);
 	

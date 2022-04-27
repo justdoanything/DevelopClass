@@ -1,7 +1,7 @@
 /*
  * 포인트 관리
  */
-package edu_java_2017.question;
+package edu_java_2017.solution;
 
 import java.util.Scanner;
 import java.util.Vector;
@@ -20,7 +20,7 @@ class Point
 	}
 }
 
-public class hw12Complete 
+public class solution03 
 {
 	static Scanner scan = new Scanner(System.in);
 	
