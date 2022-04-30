@@ -37,7 +37,7 @@ public class solution14
 	static void fileInput(List<String> List)
 	{
 		Scanner scan = new Scanner(System.in);
-		String directory = "D:\\words.txt";	
+		String directory = "/Users/yongwoo/Documents/justdoanything/DevelopClass/JAVA/hangman";	
 		
 		try
 		{

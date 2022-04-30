@@ -22,7 +22,7 @@ public class ReadWriteFiles {
     public static void main(String[] args){
         String filePath = "/Users/yongwoo/Documents/justdoanything/DevelopClass/JAVA/text";
         
-        
+        List list = new ArrayList<String>();
         try (
             // 1. 메모장 열기
             BufferedReader br = new BufferedReader(new FileReader(filePath))
@@ -37,12 +37,23 @@ public class ReadWriteFiles {
                 ){
                 // 3. 읽은 한줄 출력하기
                 System.out.println(line);
+                list.add(line);
             }
             System.out.println("======파일 읽기 끝=======");
+            
+            // 4. 파일 닫기
+            br.close();
         }catch(Exception e) {
             e.printStackTrace();
             System.out.println("Exception 발생 : " + e.toString());
         }
+
+
+
+        // list 데이터 조작
+        // 로직 다 처리
+
+        // list -> 파일에 쓰기 : fileWrite
     }
 }
 ```
@@ -255,6 +266,7 @@ public class ReadWriteFiles {
                     bw.write(writeLine);
                     bw.newLine();
                 }
+                bw.flush();
             }catch(Exception ee) {
                 ee.printStackTrace();
                 System.out.println("Exception 발생 : " + ee.toString());    

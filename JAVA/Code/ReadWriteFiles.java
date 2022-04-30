@@ -12,6 +12,12 @@ public class ReadWriteFiles {
     public static void main(String[] args){
         String filePath = "/Users/yongwoo/Documents/justdoanything/DevelopClass/JAVA/text";
         
+        try(BufferedReader br = new BufferedReader(new FileReader(filePath))) {
+
+        }catch(Exception e){
+            // Exception 처리
+        }finally{
+        }
         // 파일 읽기
         readFile(filePath);
 

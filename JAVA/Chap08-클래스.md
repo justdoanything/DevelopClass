@@ -59,12 +59,134 @@ public class hw05
     ```
 
 - ### 자주쓰는 변수 타입의 객체
-  - 일반 변수 : int, float, double, ...
-  - 객체형 변수 : String, Array, Map, ... 
+  - 일반 변수 : int, float, double, array, ...
+  - 객체형 변수 : String, List, Map, ... 
     - Array : 데이터가 일렬로 저장되고 `순서(index)`에 의존해서 데이터에 접근
-    - Map : 데이터를 Key-Value 쌍으로 저장하고 `Key`에 의존해서 데이터에 접근
+    - List : Array와 유사한 방식이고 사용할 수 있는 서브 함수의 종류가 다르다.
+    - Map : 데이터를 Key-Value 쌍으로 저장하고 `Key`에 의존해서 데이터에 접근. JSON 데이터가 Map과 동일하다고 볼 수 있다. 
+      ```java
+      public class PrintString {
+        public static void main(String[] args) {
+          
+          // Array
+          // 1. 변수 선언과 값 입력
+          String[] stringArray = new String[5]; // [ null, null, null, null, null ]
+          stringArray[0] = "사과";
+          stringArray[1] = "딸기";
+          stringArray[2] = "포도";
+          stringArray[3] = "배";
+          // [ "사과", "딸기", "포도", "배", null ]
+
+          // 2. 값 추출
+          String fruit = "";
+          fruit = stringArray[0]; // 사과
+          fruit = stringArray[1]; // 딸기
+          fruit = stringArray[2]; // 포도
+          fruit = stringArray[3]; // 배
+
+          // 3. 값 제거
+          // Array는 초기화를 하면 해당 index의 값이 공백으로 된다.
+          fruit[1] = null;
+          // [ "사과", "", "포도", "배", null ]
+
+          // 4. 검색
+          boolean isExist = false;
+          for(int index = 0; index < 5; index++){
+            if(stringArray[index].equals("사과")){
+              isExist = true;
+            }
+          }
+
+          // 5. 탐색
+
+          // 6. 값 전체 출력 : for문의 제 2 표현법
+          for(String item : stringArray){
+            System.out.println(item);
+          }
+
+          // List
+          // 1. 변수 선언과 값 입력
+          List<String> list = new ArrayList<>(); // [ ]
+          list.add("사과");
+          list.add("딸기");
+          list.add("포도");
+          list.add("배");
+          // [ "사과", "딸기", "포도", "배" ]
+
+          // 2. 값 추출
+          fruit = list.get(0); // 사과
+          fruit = list.get(1); // 딸기
+          fruit = list.get(2); // 포도
+          fruit = list.get(3); // 배
+          
+          // 3. 값 제거
+          // Array와 다르게 값을 삭제하고 순서를 재조정해준다.
+          list.remove(0);
+          list.remove("포도");
+          // [ "딸기", "배" ]
+
+          // 4. 검색 
+          isExist = list.contains("사과");
+
+          // 5. 탐색
+          for(String item : list){
+            System.out.println(item);
+          }
+
+          // 6. 값 전체 출력
+          System.err.println(list.toString());
+
+
+          // Map
+          // JSON 형태의 데이터는 key-value 쌍으로 저장이 된다.
+          // { "사과":1000, "딸기":2000, "포도":3000, "배":4000 }
+          // 1. 변수 선언과 값 입력
+          Map<String, Integer> map = new HashMap<>();
+          map.put("사과", 1000);
+          map.put("딸기", 2000);
+          map.put("포도", 3000);
+          map.put("배",  4000);
+          // { "사과":1000, "딸기":2000, "포도":3000, "배":4000 }
+
+          // map은 Array나 list와 같이 직렬적으로 쌓이지 않고 key 기준으로 value를 추가 혹은 업데이트를 한다.
+          map.put("딸기", 15000);
+          map.put("배",  20000);
+          // { "사과":1000, "딸기":15000, "포도":3000, "배":20000 }
+
+          // 2. 값 추출
+          int price = 0;
+          price = map.get("사과");  // 15000
+          price = map.get("딸기");  // 2000
+          price = map.get("포도");  // 3000
+          price = map.get("배");   // 20000
+
+          // 3. 값 제거
+          map.remove("사과");
+          map.remove("딸기");
+          // { "포도":3000, "배":20000 }
+
+          // 4. 검색 : key, value를 따로 검색할 수 있다.
+          isExist = map.containsKey("딸기");
+          isExist = map.containsValue(15000)
+
+          // 5. 탐색 : key를 먼저 추출하고 값을 검색한다.
+          for(String key : map.keySet()) {
+            System.out.println(key + ":" + map.get(key));
+          }
+
+          // 6. 값 전체 출력
+          System.out.println(map.toString());
+          System.out.println(map.keySet().toString()); // key 만 출력
+          System.out.println(map.values()); // value 만 출력
+        }
+      }
+      ```
 
 - ### 부록
+  - #### null과 공백의 차이
+    - null는 `존재하지 않는` 것이고 공백은 `비어있는` 상태라고 생각하면 된다.
+    - 물잔에 물이 없는건 `비어있는` 상태고 물잔 자체가 아예 없는건 `존재하지 않는` 상태이다.
+    - null인 상태를 접근해서 사용할 때 NullPointException이 발생할 수 있으니 유의하자.
   - #### 함수 오버라이딩 (Method Overloading)
     - 함수는 파라미터의 수와 형식이 다르면 같은 이름을 사용할 수 있다.
       ```java
@@ -79,7 +201,7 @@ public class hw05
       public void move(String mile){ }
 
       // 파라미터의 수가 다름.
-      public void move(int spped, String mile){ }
+      public void move(int speed, String mile){ }
       
       // 파라미터의 수가 같고 int, String 타입을 갖지만 순서가 다름.
       public void move(String mile, int speed){ }
