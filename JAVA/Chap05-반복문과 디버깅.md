@@ -52,6 +52,21 @@ public static void main(String[] args) {
 }
 ```
 
+```java
+// Array, List 와 같은 객체에서 값을 하나씩 뽑아올 때 쓰는 for문
+public static void main(String[] args) {
+  ArrayList<String> nameList = new ArrayList<>();
+  nameList.add("사과");
+  nameList.add("딸기");
+  nameList.add("포도");
+  nameList.add("배");
+
+  for(String item : itemNameList){
+    System.out.println(item);
+  }
+}
+```
+
 - ### while문
 for문과 동작은 비슷하게 돌아가지만 표현하는 방식이 다릅니다.
 ```java

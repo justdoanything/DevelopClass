@@ -113,6 +113,8 @@ import java.util.InputMismatchException;
 import java.util.Random;
 import java.util.Scanner;
 
+// apple은 100원
+// banana은 200원
 public class solution04 
 {
 	static int totalMoney = 0;									//총 매출액
