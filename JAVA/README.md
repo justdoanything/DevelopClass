@@ -2,7 +2,7 @@
 - 1일차 : Chap01 ~ Chap04
 - 2일차 : Chap05 ~ Chap08 (Class)
 - 3일차 : question 구조 잡기, Chap08(자주쓰는 객체) ~ Chap09
-
+- 4일차 : 문제 풀이 및 코드 구조 개선
 
 
 
