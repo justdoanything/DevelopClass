@@ -61,7 +61,7 @@ public static void main(String[] args) {
   nameList.add("포도");
   nameList.add("배");
 
-  for(String item : itemNameList){
+  for(String item : nameList){
     System.out.println(item);
   }
 }
